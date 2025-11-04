@@ -55,7 +55,7 @@ setTimeBasedTheme(currentHour);
 
 async function getData(cityName) {
   const promise = await fetch(
-    `http://api.weatherapi.com/v1/current.json?key=bc3dee1022b949b2a5f121559252105&q=${cityName}&aqi=yes`
+    `https://api.weatherapi.com/v1/current.json?key=bc3dee1022b949b2a5f121559252105&q=${cityName}&aqi=yes`
   );
   return await promise.json();
 }
