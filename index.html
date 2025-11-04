@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clima</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="weather_icons/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div id="card" class="morning">
+        
+        <div class="search-container">
+            <button id="theme" onclick="themecha()"></button>
+            <input type="text" id="search-bar" placeholder="Search for cities" class="search-input" onfocus="this.value=''"/>
+            <button class="search-button"><i id="search-button" class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    
+        <div id="weatherrepo">
+            <h4 id="area"></h4>
+            <span id="weather_icon"></span>
+            <h2 id="weath"></h2>
+        </div>
+
+  </div>
+    
+  <script src="app.js"></script>
+  </body>
+</html>
