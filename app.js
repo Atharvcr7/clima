@@ -81,47 +81,47 @@ async function fetchWeather() {
   const uv = result.current.uv;
 
   if (cloud < 20 && precip === 0 && phase === 1) {
-    icon.innerHTML = `<img src="weather_icons/morning/sunny.png">`;
+    icon.innerHTML = `<img src="sunny.png">`;
     weath.innerText = `Sunny || ${temp}°C`;
     card.classList.remove(...themeClasses);
     card.classList.add("morning");
   } else if (cloud < 20 && precip === 0 && phase === 0) {
-    icon.innerHTML = `<img src="weather_icons/night/nightmoon.png">`;
+    icon.innerHTML = `<img src="nightmoon.png">`;
     weath.innerText = `Clear || ${temp}°C`;
     card.classList.remove(...themeClasses);
     card.classList.add("night");
   } else if (cloud >= 20 && cloud <= 60 && precip === 0 && phase === 1 && uv >= 3 && uv <= 6) {
-    icon.innerHTML = `<img src="weather_icons/morning/partialy.png">`;
+    icon.innerHTML = `<img src="partialy.png">`;
     weath.innerText = `Partly Cloudy || ${temp}°C`;
     card.classList.remove(...themeClasses);
     card.classList.add("afternoon");
   } else if (cloud >= 20 && cloud <= 60 && precip === 0 && phase === 0) {
-    icon.innerHTML = `<img src="weather_icons/night/cloudymoon.png">`;
+    icon.innerHTML = `<img src="cloudymoon.png">`;
     weath.innerText = `Partly Cloudy || ${temp}°C`;
     card.classList.remove(...themeClasses);
     card.classList.add("night");
   } else if (cloud > 60 && precip === 0 && visib > 5) {
-    icon.innerHTML = `<img src="weather_icons/cloudy.png">`;
+    icon.innerHTML = `<img src="cloudy.png">`;
     weath.innerText = `Cloudy || ${temp}°C`;
     card.classList.remove(...themeClasses);
     card.classList.add(phase == 1 ? "afternoon" : "night");
   } else if (precip > 0.1 && cloud > 50) {
-    icon.innerHTML = `<img src="weather_icons/rainy.png">`;
+    icon.innerHTML = `<img src="rainy.png">`;
     weath.innerText = `Raining || ${temp}°C`;
     card.classList.remove(...themeClasses);
     card.classList.add(phase == 1 ? "afternoon" : "night");
   } else if (precip > 2 && cloud > 70 && wind > 30 && humid > 80) {
-    icon.innerHTML = `<img src="weather_icons/stormy.png">`;
+    icon.innerHTML = `<img src="stormy.png">`;
     weath.innerText = `Stormy || ${temp}°C`;
     card.classList.remove(...themeClasses);
     card.classList.add(phase == 1 ? "afternoon" : "night");
   } else if (cloud >= 20 && visib < 6 && humid > 30) {
-    icon.innerHTML = `<img src="weather_icons/foggymist.png">`;
+    icon.innerHTML = `<img src="foggymist.png">`;
     weath.innerText = `Mist || ${temp}°C`;
     card.classList.remove(...themeClasses);
     card.classList.add(phase == 1 ? "afternoon" : "night");
   } else if (wind > 30 && gust > 40) {
-    icon.innerHTML = `<img src="weather_icons/windy.png">`;
+    icon.innerHTML = `<img src="windy.png">`;
     weath.innerText = `Windy || ${temp}°C`;
     card.classList.remove(...themeClasses);
     card.classList.add(phase == 1 ? "afternoon" : "night");
